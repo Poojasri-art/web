@@ -5,7 +5,7 @@ class LoginPage extends BasePage {
   constructor(driver) {
     super(driver);
     this.emailInput = By.css('input[type="email"]');
-    this.passwordInput = By.css('input[type="password"]');
+    this.passwordInput = By.css('input[name="password"]');
     this.submitBtn = By.css('button[type="submit"]');
     this.errorMessage = By.xpath("//div[contains(@style, 'rgba(255, 59, 48') or contains(text(), 'Please fill') or contains(text(), 'error')]");
     this.createAccountLink = By.xpath("//a[contains(text(), 'Create an account')]");

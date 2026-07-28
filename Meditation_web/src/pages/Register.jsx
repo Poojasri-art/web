@@ -43,13 +43,8 @@ export default function Register() {
             );
 
             if (resp.status === 'success') {
-                const loginResp = await api.login(formData.email, formData.password);
-                if (loginResp.status === 'success') {
-                    login({ email: loginResp.email, username: loginResp.email.split('@')[0], user_id: loginResp.user_id });
-                    navigate('/home');
-                } else {
-                    navigate('/login');
-                }
+                await login(formData.email, formData.password);
+                navigate('/home');
             } else {
                 setError(resp.message || 'Registration failed');
             }

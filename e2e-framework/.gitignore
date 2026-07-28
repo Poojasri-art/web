@@ -1,0 +1,8 @@
+# Node dependencies
+node_modules/
+
+# Generated E2E reports and artifacts (do not commit)
+excel/
+logs/
+reports/
+screenshots/

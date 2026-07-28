@@ -49,7 +49,7 @@ class ExcelReporter {
     const passPercentage = total > 0 ? ((passed / total) * 100).toFixed(2) + '%' : '0%';
 
     // Sheet 1: Summary
-    const summarySheet = this.workbook.addWorksheet('Summary');
+    const summarySheet = this._getOrCreateWorksheet('Summary');
     summarySheet.columns = [
       { header: 'Metric', key: 'metric', width: 25 },
       { header: 'Value', key: 'value', width: 35 }
@@ -67,7 +67,7 @@ class ExcelReporter {
     this._styleHeaderRow(summarySheet);
 
     // Sheet 2: Test Cases
-    const testCasesSheet = this.workbook.addWorksheet('Test Cases');
+    const testCasesSheet = this._getOrCreateWorksheet('Test Cases');
     testCasesSheet.columns = [
       { header: 'Test ID', key: 'id', width: 12 },
       { header: 'Module', key: 'module', width: 20 },
@@ -90,7 +90,7 @@ class ExcelReporter {
     this._styleHeaderRow(testCasesSheet);
 
     // Sheet 3: Failed Tests
-    const failedSheet = this.workbook.addWorksheet('Failed Tests');
+    const failedSheet = this._getOrCreateWorksheet('Failed Tests');
     failedSheet.columns = [
       { header: 'Test Name', key: 'testName', width: 35 },
       { header: 'Failure Reason', key: 'failureReason', width: 45 },
@@ -102,7 +102,7 @@ class ExcelReporter {
     this._styleHeaderRow(failedSheet);
 
     // Sheet 4: Execution Logs
-    const logsSheet = this.workbook.addWorksheet('Execution Logs');
+    const logsSheet = this._getOrCreateWorksheet('Execution Logs');
     logsSheet.columns = [
       { header: 'Timestamp', key: 'timestamp', width: 25 },
       { header: 'Test Name', key: 'testName', width: 30 },
@@ -130,6 +130,14 @@ class ExcelReporter {
     headerRow.font = { bold: true, color: { argb: 'FFFFFF' } };
     headerRow.fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: '1F4E79' } }; // Dark Blue Header
     headerRow.alignment = { vertical: 'middle', horizontal: 'center' };
+  }
+
+  _getOrCreateWorksheet(name) {
+    const existing = this.workbook.getWorksheet(name);
+    if (existing) {
+      this.workbook.removeWorksheet(existing.id);
+    }
+    return this.workbook.addWorksheet(name);
   }
 }
 
