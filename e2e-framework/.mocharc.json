@@ -12,6 +12,7 @@
     "json=true"
   ],
   "slow": 75,
+  "spec": ["tests/**/*.test.js"],
   "timeout": 60000,
   "ui": "bdd",
   "recursive": true
