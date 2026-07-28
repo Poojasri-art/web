@@ -1,0 +1,19 @@
+/* Layout Desktop default: show sidebar, hide top bar */
+.mobile-top-bar {
+    display: none !important;
+}
+
+.desktop-sidebar {
+    display: flex !important;
+}
+
+/* On mobile screens, hide sidebar, show top bar */
+@media (max-width: 768px) {
+    .mobile-top-bar {
+        display: flex !important;
+    }
+
+    .desktop-sidebar {
+        display: none !important;
+    }
+}

@@ -1,0 +1,45 @@
+{
+  "name": "react-selenium-e2e-framework",
+  "version": "1.0.0",
+  "description": "Production-Ready E2E Selenium WebDriver Automation Framework for React Applications in Node.js",
+  "main": "index.js",
+  "type": "commonjs",
+  "scripts": {
+    "test": "mocha --config .mocharc.json",
+    "test:headed": "CROSS_ENV BROWSER=chrome HEADLESS=false mocha --config .mocharc.json",
+    "test:headless": "CROSS_ENV BROWSER=chrome HEADLESS=true mocha --config .mocharc.json",
+    "test:firefox": "CROSS_ENV BROWSER=firefox HEADLESS=true mocha --config .mocharc.json",
+    "test:edge": "CROSS_ENV BROWSER=edge HEADLESS=true mocha --config .mocharc.json",
+    "test:parallel": "mocha --config .mocharc.json --parallel",
+    "test:auth": "mocha tests/auth.test.js --config .mocharc.json",
+    "test:forms": "mocha tests/forms.test.js --config .mocharc.json",
+    "test:ui": "mocha tests/ui.test.js --config .mocharc.json",
+    "test:navigation": "mocha tests/navigation.test.js --config .mocharc.json",
+    "test:discovery": "mocha tests/dynamic_discovery.test.js --config .mocharc.json"
+  },
+  "keywords": [
+    "selenium",
+    "webdriver",
+    "nodejs",
+    "react",
+    "mocha",
+    "chai",
+    "exceljs",
+    "mochawesome",
+    "winston",
+    "github-actions",
+    "e2e-testing"
+  ],
+  "author": "QA Automation Architect",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.3.10",
+    "dotenv": "^16.4.5",
+    "exceljs": "^4.4.0",
+    "mocha": "^10.4.0",
+    "mochawesome": "^7.1.3",
+    "mochawesome-report-generator": "^6.2.0",
+    "selenium-webdriver": "^4.20.0",
+    "winston": "^3.13.0"
+  }
+}

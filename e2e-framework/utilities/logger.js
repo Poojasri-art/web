@@ -1,0 +1,41 @@
+const fs = require('fs');
+const path = require('path');
+const winston = require('winston');
+const config = require('../config/config');
+
+const logDir = path.resolve(config.paths.logs);
+if (!fs.existsSync(logDir)) {
+  fs.mkdirSync(logDir, { recursive: true });
+}
+
+const logger = winston.createLogger({
+  level: 'info',
+  format: winston.format.combine(
+    winston.format.timestamp({ format: 'YYYY-MM-DD HH:mm:ss' }),
+    winston.format.printf(({ timestamp, level, message }) => {
+      return `[${timestamp}] [${level.toUpperCase()}]: ${message}`;
+    })
+  ),
+  transports: [
+    new winston.transports.Console({
+      format: winston.format.combine(
+        winston.format.colorize(),
+        winston.format.printf(({ timestamp, level, message }) => {
+          return `[${timestamp}] [${level}]: ${message}`;
+        })
+      )
+    }),
+    new winston.transports.File({
+      filename: path.join(logDir, 'execution.log'),
+      level: 'info',
+      maxsize: 5242880, // 5MB
+      maxFiles: 5
+    }),
+    new winston.transports.File({
+      filename: path.join(logDir, 'error.log'),
+      level: 'error'
+    })
+  ]
+});
+
+module.exports = logger;
