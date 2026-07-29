@@ -70,20 +70,19 @@ class SeleniumUtils {
   }
 
   // --- Dynamic Elements & Check ---
-  async isElementPresent(locator) {
+  async isElementPresent(locator, timeout = 3000) {
     try {
-      const elements = await this.driver.findElements(locator);
-      return elements.length > 0;
+      await this.driver.wait(until.elementLocated(locator), timeout);
+      return true;
     } catch (e) {
       return false;
     }
   }
 
-  async isElementDisplayed(locator) {
+  async isElementDisplayed(locator, timeout = 3000) {
     try {
-      const elements = await this.driver.findElements(locator);
-      if (elements.length === 0) return false;
-      return await elements[0].isDisplayed();
+      const element = await this.driver.wait(until.elementLocated(locator), timeout);
+      return await element.isDisplayed();
     } catch (e) {
       return false;
     }
