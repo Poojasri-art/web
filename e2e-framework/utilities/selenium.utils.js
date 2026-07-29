@@ -70,7 +70,7 @@ class SeleniumUtils {
   }
 
   // --- Dynamic Elements & Check ---
-  async isElementPresent(locator, timeout = 3000) {
+  async isElementPresent(locator, timeout = config.explicitWait) {
     try {
       await this.driver.wait(until.elementLocated(locator), timeout);
       return true;
@@ -79,7 +79,7 @@ class SeleniumUtils {
     }
   }
 
-  async isElementDisplayed(locator, timeout = 3000) {
+  async isElementDisplayed(locator, timeout = config.explicitWait) {
     try {
       const element = await this.driver.wait(until.elementLocated(locator), timeout);
       return await element.isDisplayed();

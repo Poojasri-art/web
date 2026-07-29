@@ -79,3 +79,11 @@ jobs:
             e2e-framework/screenshots/
             e2e-framework/logs/
           retention-days: 30
+
+      - name: 10. Report Failures to Issue
+        if: failure()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          node -e "const r=require('./e2e-framework/reports/html/E2E_Test_Report.json'); let msg = 'Failures:\\n'; r.results.forEach(s=>s.suites.forEach(ss=>ss.tests.forEach(t=>{if(t.fail) msg+=t.title+'\\n'+t.err.message+'\\n\\n';}))); require('fs').writeFileSync('fails.txt', msg);"
+          gh issue create --title "Actions E2E Failures" --body-file fails.txt || true
