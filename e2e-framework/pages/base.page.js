@@ -12,6 +12,8 @@ class BasePage {
     const fullUrl = `${config.baseUrl}${path.startsWith('/') ? path : '/' + path}`;
     logger.info(`Navigating to URL: ${fullUrl}`);
     await this.driver.get(fullUrl);
+    // Allow React to hydrate after navigation (critical on fast CI runners like GitHub Actions)
+    await this.driver.sleep(300);
   }
 
   async getTitle() {

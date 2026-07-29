@@ -64,7 +64,8 @@ class DriverFactory {
     const driver = await driverBuilder.build();
     await driver.manage().setTimeouts({
       implicit: config.implicitWait,
-      pageLoad: config.pageLoadTimeout
+      pageLoad: config.pageLoadTimeout,
+      script: 30000
     });
 
     if (!isHeadless) {
