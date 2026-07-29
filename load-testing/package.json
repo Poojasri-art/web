@@ -1,0 +1,19 @@
+{
+  "name": "cognisync-load-testing",
+  "version": "1.0.0",
+  "description": "Node.js load testing framework for CogniSync Web Application — 300 checks across 10 routes and 4 load scenarios",
+  "main": "run.js",
+  "scripts": {
+    "load-test": "node run.js",
+    "load-test:baseline": "node run.js --scenario baseline",
+    "load-test:normal": "node run.js --scenario normal",
+    "load-test:stress": "node run.js --scenario stress",
+    "load-test:spike": "node run.js --scenario spike",
+    "load-test:all": "node run.js --scenario all"
+  },
+  "keywords": ["load-testing", "performance", "selenium", "cognisync"],
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
