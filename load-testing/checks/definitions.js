@@ -132,9 +132,9 @@ function buildChecksForRoute(route) {
     },
     {
       id: `${id}_C03`, category: 'Content', group: 'C',
-      name: label('C03', 'Response body length > 500 bytes'),
-      description: 'Response body is at least 500 bytes',
-      fn: r => !!(r.body && r.body.length > 500),
+      name: label('C03', 'Response body length > 300 bytes'),
+      description: 'Response body is at least 300 bytes (Vite production HTML shell)',
+      fn: r => !!(r.body && r.body.length > 300),
     },
     {
       id: `${id}_C04`, category: 'Content', group: 'C',

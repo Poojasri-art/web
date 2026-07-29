@@ -1,0 +1,301 @@
+Check ID,Category,Route ID,Route Path,Check Name,Total Evaluations,Pass Count,Fail Count,Pass Rate (%),Status
+ROOT_S01,Status,ROOT,/,"[ROOT] S01: HTTP status is 200",105,105,0,100,PASS
+ROOT_S02,Status,ROOT,/,"[ROOT] S02: HTTP status is not 404",105,105,0,100,PASS
+ROOT_S03,Status,ROOT,/,"[ROOT] S03: HTTP status is not 500",105,105,0,100,PASS
+ROOT_S04,Status,ROOT,/,"[ROOT] S04: No client-side errors (status < 400)",105,105,0,100,PASS
+ROOT_S05,Status,ROOT,/,"[ROOT] S05: No server-side errors (status < 500)",105,105,0,100,PASS
+ROOT_T01,Performance,ROOT,/,"[ROOT] T01: Response time < 5000ms [CRITICAL]",105,105,0,100,PASS
+ROOT_T02,Performance,ROOT,/,"[ROOT] T02: Response time < 3000ms [GOOD]",105,105,0,100,PASS
+ROOT_T03,Performance,ROOT,/,"[ROOT] T03: Response time < 2000ms [TARGET]",105,105,0,100,PASS
+ROOT_T04,Performance,ROOT,/,"[ROOT] T04: Response time < 1000ms [EXCELLENT]",105,105,0,100,PASS
+ROOT_T05,Performance,ROOT,/,"[ROOT] T05: Response time < 500ms [FAST]",105,105,0,100,PASS
+ROOT_T06,Performance,ROOT,/,"[ROOT] T06: TTFB < 2000ms [Time-To-First-Byte]",105,105,0,100,PASS
+ROOT_T07,Performance,ROOT,/,"[ROOT] T07: TTFB < 1000ms [Time-To-First-Byte]",105,105,0,100,PASS
+ROOT_T08,Performance,ROOT,/,"[ROOT] T08: No request timeout occurred",105,105,0,100,PASS
+ROOT_C01,Content,ROOT,/,"[ROOT] C01: Response body is not empty",105,105,0,100,PASS
+ROOT_C02,Content,ROOT,/,"[ROOT] C02: Response body length > 100 bytes",105,105,0,100,PASS
+ROOT_C03,Content,ROOT,/,"[ROOT] C03: Response body length > 500 bytes",105,0,105,0,FAIL
+ROOT_C04,Content,ROOT,/,"[ROOT] C04: Response body length > 200 bytes",105,105,0,100,PASS
+ROOT_C05,Content,ROOT,/,"[ROOT] C05: Body contains DOCTYPE declaration",105,105,0,100,PASS
+ROOT_C06,Content,ROOT,/,"[ROOT] C06: Body contains <html> element",105,105,0,100,PASS
+ROOT_C07,Content,ROOT,/,"[ROOT] C07: Body contains <head> element",105,105,0,100,PASS
+ROOT_C08,Content,ROOT,/,"[ROOT] C08: Body contains <body> element",105,105,0,100,PASS
+ROOT_C09,Content,ROOT,/,"[ROOT] C09: Body contains <title> tag with app name",105,105,0,100,PASS
+ROOT_C10,Content,ROOT,/,"[ROOT] C10: Body contains React root mount element",105,105,0,100,PASS
+ROOT_H01,Headers,ROOT,/,"[ROOT] H01: Content-Type header is present",105,105,0,100,PASS
+ROOT_H02,Headers,ROOT,/,"[ROOT] H02: Content-Type includes text/html",105,105,0,100,PASS
+ROOT_H03,Headers,ROOT,/,"[ROOT] H03: Content-Length or Transfer-Encoding present",105,105,0,100,PASS
+ROOT_H04,Headers,ROOT,/,"[ROOT] H04: No error indicator in response headers",105,105,0,100,PASS
+ROOT_E01,Errors,ROOT,/,"[ROOT] E01: Body does not contain 500 Internal Server Error",105,105,0,100,PASS
+ROOT_E02,Errors,ROOT,/,"[ROOT] E02: Body does not contain 503 Service Unavailable",105,105,0,100,PASS
+ROOT_E03,Errors,ROOT,/,"[ROOT] E03: No network or connection error occurred",105,105,0,100,PASS
+INTRO_S01,Status,INTRO,/intro,"[INTRO] S01: HTTP status is 200",105,105,0,100,PASS
+INTRO_S02,Status,INTRO,/intro,"[INTRO] S02: HTTP status is not 404",105,105,0,100,PASS
+INTRO_S03,Status,INTRO,/intro,"[INTRO] S03: HTTP status is not 500",105,105,0,100,PASS
+INTRO_S04,Status,INTRO,/intro,"[INTRO] S04: No client-side errors (status < 400)",105,105,0,100,PASS
+INTRO_S05,Status,INTRO,/intro,"[INTRO] S05: No server-side errors (status < 500)",105,105,0,100,PASS
+INTRO_T01,Performance,INTRO,/intro,"[INTRO] T01: Response time < 5000ms [CRITICAL]",105,105,0,100,PASS
+INTRO_T02,Performance,INTRO,/intro,"[INTRO] T02: Response time < 3000ms [GOOD]",105,105,0,100,PASS
+INTRO_T03,Performance,INTRO,/intro,"[INTRO] T03: Response time < 2000ms [TARGET]",105,105,0,100,PASS
+INTRO_T04,Performance,INTRO,/intro,"[INTRO] T04: Response time < 1000ms [EXCELLENT]",105,105,0,100,PASS
+INTRO_T05,Performance,INTRO,/intro,"[INTRO] T05: Response time < 500ms [FAST]",105,105,0,100,PASS
+INTRO_T06,Performance,INTRO,/intro,"[INTRO] T06: TTFB < 2000ms [Time-To-First-Byte]",105,105,0,100,PASS
+INTRO_T07,Performance,INTRO,/intro,"[INTRO] T07: TTFB < 1000ms [Time-To-First-Byte]",105,105,0,100,PASS
+INTRO_T08,Performance,INTRO,/intro,"[INTRO] T08: No request timeout occurred",105,105,0,100,PASS
+INTRO_C01,Content,INTRO,/intro,"[INTRO] C01: Response body is not empty",105,105,0,100,PASS
+INTRO_C02,Content,INTRO,/intro,"[INTRO] C02: Response body length > 100 bytes",105,105,0,100,PASS
+INTRO_C03,Content,INTRO,/intro,"[INTRO] C03: Response body length > 500 bytes",105,0,105,0,FAIL
+INTRO_C04,Content,INTRO,/intro,"[INTRO] C04: Response body length > 200 bytes",105,105,0,100,PASS
+INTRO_C05,Content,INTRO,/intro,"[INTRO] C05: Body contains DOCTYPE declaration",105,105,0,100,PASS
+INTRO_C06,Content,INTRO,/intro,"[INTRO] C06: Body contains <html> element",105,105,0,100,PASS
+INTRO_C07,Content,INTRO,/intro,"[INTRO] C07: Body contains <head> element",105,105,0,100,PASS
+INTRO_C08,Content,INTRO,/intro,"[INTRO] C08: Body contains <body> element",105,105,0,100,PASS
+INTRO_C09,Content,INTRO,/intro,"[INTRO] C09: Body contains <title> tag with app name",105,105,0,100,PASS
+INTRO_C10,Content,INTRO,/intro,"[INTRO] C10: Body contains React root mount element",105,105,0,100,PASS
+INTRO_H01,Headers,INTRO,/intro,"[INTRO] H01: Content-Type header is present",105,105,0,100,PASS
+INTRO_H02,Headers,INTRO,/intro,"[INTRO] H02: Content-Type includes text/html",105,105,0,100,PASS
+INTRO_H03,Headers,INTRO,/intro,"[INTRO] H03: Content-Length or Transfer-Encoding present",105,105,0,100,PASS
+INTRO_H04,Headers,INTRO,/intro,"[INTRO] H04: No error indicator in response headers",105,105,0,100,PASS
+INTRO_E01,Errors,INTRO,/intro,"[INTRO] E01: Body does not contain 500 Internal Server Error",105,105,0,100,PASS
+INTRO_E02,Errors,INTRO,/intro,"[INTRO] E02: Body does not contain 503 Service Unavailable",105,105,0,100,PASS
+INTRO_E03,Errors,INTRO,/intro,"[INTRO] E03: No network or connection error occurred",105,105,0,100,PASS
+LOGIN_S01,Status,LOGIN,/login,"[LOGIN] S01: HTTP status is 200",105,105,0,100,PASS
+LOGIN_S02,Status,LOGIN,/login,"[LOGIN] S02: HTTP status is not 404",105,105,0,100,PASS
+LOGIN_S03,Status,LOGIN,/login,"[LOGIN] S03: HTTP status is not 500",105,105,0,100,PASS
+LOGIN_S04,Status,LOGIN,/login,"[LOGIN] S04: No client-side errors (status < 400)",105,105,0,100,PASS
+LOGIN_S05,Status,LOGIN,/login,"[LOGIN] S05: No server-side errors (status < 500)",105,105,0,100,PASS
+LOGIN_T01,Performance,LOGIN,/login,"[LOGIN] T01: Response time < 5000ms [CRITICAL]",105,105,0,100,PASS
+LOGIN_T02,Performance,LOGIN,/login,"[LOGIN] T02: Response time < 3000ms [GOOD]",105,105,0,100,PASS
+LOGIN_T03,Performance,LOGIN,/login,"[LOGIN] T03: Response time < 2000ms [TARGET]",105,105,0,100,PASS
+LOGIN_T04,Performance,LOGIN,/login,"[LOGIN] T04: Response time < 1000ms [EXCELLENT]",105,105,0,100,PASS
+LOGIN_T05,Performance,LOGIN,/login,"[LOGIN] T05: Response time < 500ms [FAST]",105,105,0,100,PASS
+LOGIN_T06,Performance,LOGIN,/login,"[LOGIN] T06: TTFB < 2000ms [Time-To-First-Byte]",105,105,0,100,PASS
+LOGIN_T07,Performance,LOGIN,/login,"[LOGIN] T07: TTFB < 1000ms [Time-To-First-Byte]",105,105,0,100,PASS
+LOGIN_T08,Performance,LOGIN,/login,"[LOGIN] T08: No request timeout occurred",105,105,0,100,PASS
+LOGIN_C01,Content,LOGIN,/login,"[LOGIN] C01: Response body is not empty",105,105,0,100,PASS
+LOGIN_C02,Content,LOGIN,/login,"[LOGIN] C02: Response body length > 100 bytes",105,105,0,100,PASS
+LOGIN_C03,Content,LOGIN,/login,"[LOGIN] C03: Response body length > 500 bytes",105,0,105,0,FAIL
+LOGIN_C04,Content,LOGIN,/login,"[LOGIN] C04: Response body length > 200 bytes",105,105,0,100,PASS
+LOGIN_C05,Content,LOGIN,/login,"[LOGIN] C05: Body contains DOCTYPE declaration",105,105,0,100,PASS
+LOGIN_C06,Content,LOGIN,/login,"[LOGIN] C06: Body contains <html> element",105,105,0,100,PASS
+LOGIN_C07,Content,LOGIN,/login,"[LOGIN] C07: Body contains <head> element",105,105,0,100,PASS
+LOGIN_C08,Content,LOGIN,/login,"[LOGIN] C08: Body contains <body> element",105,105,0,100,PASS
+LOGIN_C09,Content,LOGIN,/login,"[LOGIN] C09: Body contains <title> tag with app name",105,105,0,100,PASS
+LOGIN_C10,Content,LOGIN,/login,"[LOGIN] C10: Body contains React root mount element",105,105,0,100,PASS
+LOGIN_H01,Headers,LOGIN,/login,"[LOGIN] H01: Content-Type header is present",105,105,0,100,PASS
+LOGIN_H02,Headers,LOGIN,/login,"[LOGIN] H02: Content-Type includes text/html",105,105,0,100,PASS
+LOGIN_H03,Headers,LOGIN,/login,"[LOGIN] H03: Content-Length or Transfer-Encoding present",105,105,0,100,PASS
+LOGIN_H04,Headers,LOGIN,/login,"[LOGIN] H04: No error indicator in response headers",105,105,0,100,PASS
+LOGIN_E01,Errors,LOGIN,/login,"[LOGIN] E01: Body does not contain 500 Internal Server Error",105,105,0,100,PASS
+LOGIN_E02,Errors,LOGIN,/login,"[LOGIN] E02: Body does not contain 503 Service Unavailable",105,105,0,100,PASS
+LOGIN_E03,Errors,LOGIN,/login,"[LOGIN] E03: No network or connection error occurred",105,105,0,100,PASS
+REGISTER_S01,Status,REGISTER,/register,"[REGISTER] S01: HTTP status is 200",105,105,0,100,PASS
+REGISTER_S02,Status,REGISTER,/register,"[REGISTER] S02: HTTP status is not 404",105,105,0,100,PASS
+REGISTER_S03,Status,REGISTER,/register,"[REGISTER] S03: HTTP status is not 500",105,105,0,100,PASS
+REGISTER_S04,Status,REGISTER,/register,"[REGISTER] S04: No client-side errors (status < 400)",105,105,0,100,PASS
+REGISTER_S05,Status,REGISTER,/register,"[REGISTER] S05: No server-side errors (status < 500)",105,105,0,100,PASS
+REGISTER_T01,Performance,REGISTER,/register,"[REGISTER] T01: Response time < 5000ms [CRITICAL]",105,105,0,100,PASS
+REGISTER_T02,Performance,REGISTER,/register,"[REGISTER] T02: Response time < 3000ms [GOOD]",105,105,0,100,PASS
+REGISTER_T03,Performance,REGISTER,/register,"[REGISTER] T03: Response time < 2000ms [TARGET]",105,105,0,100,PASS
+REGISTER_T04,Performance,REGISTER,/register,"[REGISTER] T04: Response time < 1000ms [EXCELLENT]",105,105,0,100,PASS
+REGISTER_T05,Performance,REGISTER,/register,"[REGISTER] T05: Response time < 500ms [FAST]",105,105,0,100,PASS
+REGISTER_T06,Performance,REGISTER,/register,"[REGISTER] T06: TTFB < 2000ms [Time-To-First-Byte]",105,105,0,100,PASS
+REGISTER_T07,Performance,REGISTER,/register,"[REGISTER] T07: TTFB < 1000ms [Time-To-First-Byte]",105,105,0,100,PASS
+REGISTER_T08,Performance,REGISTER,/register,"[REGISTER] T08: No request timeout occurred",105,105,0,100,PASS
+REGISTER_C01,Content,REGISTER,/register,"[REGISTER] C01: Response body is not empty",105,105,0,100,PASS
+REGISTER_C02,Content,REGISTER,/register,"[REGISTER] C02: Response body length > 100 bytes",105,105,0,100,PASS
+REGISTER_C03,Content,REGISTER,/register,"[REGISTER] C03: Response body length > 500 bytes",105,0,105,0,FAIL
+REGISTER_C04,Content,REGISTER,/register,"[REGISTER] C04: Response body length > 200 bytes",105,105,0,100,PASS
+REGISTER_C05,Content,REGISTER,/register,"[REGISTER] C05: Body contains DOCTYPE declaration",105,105,0,100,PASS
+REGISTER_C06,Content,REGISTER,/register,"[REGISTER] C06: Body contains <html> element",105,105,0,100,PASS
+REGISTER_C07,Content,REGISTER,/register,"[REGISTER] C07: Body contains <head> element",105,105,0,100,PASS
+REGISTER_C08,Content,REGISTER,/register,"[REGISTER] C08: Body contains <body> element",105,105,0,100,PASS
+REGISTER_C09,Content,REGISTER,/register,"[REGISTER] C09: Body contains <title> tag with app name",105,105,0,100,PASS
+REGISTER_C10,Content,REGISTER,/register,"[REGISTER] C10: Body contains React root mount element",105,105,0,100,PASS
+REGISTER_H01,Headers,REGISTER,/register,"[REGISTER] H01: Content-Type header is present",105,105,0,100,PASS
+REGISTER_H02,Headers,REGISTER,/register,"[REGISTER] H02: Content-Type includes text/html",105,105,0,100,PASS
+REGISTER_H03,Headers,REGISTER,/register,"[REGISTER] H03: Content-Length or Transfer-Encoding present",105,105,0,100,PASS
+REGISTER_H04,Headers,REGISTER,/register,"[REGISTER] H04: No error indicator in response headers",105,105,0,100,PASS
+REGISTER_E01,Errors,REGISTER,/register,"[REGISTER] E01: Body does not contain 500 Internal Server Error",105,105,0,100,PASS
+REGISTER_E02,Errors,REGISTER,/register,"[REGISTER] E02: Body does not contain 503 Service Unavailable",105,105,0,100,PASS
+REGISTER_E03,Errors,REGISTER,/register,"[REGISTER] E03: No network or connection error occurred",105,105,0,100,PASS
+FORGOT_S01,Status,FORGOT,/forgot-password,"[FORGOT] S01: HTTP status is 200",105,105,0,100,PASS
+FORGOT_S02,Status,FORGOT,/forgot-password,"[FORGOT] S02: HTTP status is not 404",105,105,0,100,PASS
+FORGOT_S03,Status,FORGOT,/forgot-password,"[FORGOT] S03: HTTP status is not 500",105,105,0,100,PASS
+FORGOT_S04,Status,FORGOT,/forgot-password,"[FORGOT] S04: No client-side errors (status < 400)",105,105,0,100,PASS
+FORGOT_S05,Status,FORGOT,/forgot-password,"[FORGOT] S05: No server-side errors (status < 500)",105,105,0,100,PASS
+FORGOT_T01,Performance,FORGOT,/forgot-password,"[FORGOT] T01: Response time < 5000ms [CRITICAL]",105,105,0,100,PASS
+FORGOT_T02,Performance,FORGOT,/forgot-password,"[FORGOT] T02: Response time < 3000ms [GOOD]",105,105,0,100,PASS
+FORGOT_T03,Performance,FORGOT,/forgot-password,"[FORGOT] T03: Response time < 2000ms [TARGET]",105,105,0,100,PASS
+FORGOT_T04,Performance,FORGOT,/forgot-password,"[FORGOT] T04: Response time < 1000ms [EXCELLENT]",105,105,0,100,PASS
+FORGOT_T05,Performance,FORGOT,/forgot-password,"[FORGOT] T05: Response time < 500ms [FAST]",105,105,0,100,PASS
+FORGOT_T06,Performance,FORGOT,/forgot-password,"[FORGOT] T06: TTFB < 2000ms [Time-To-First-Byte]",105,105,0,100,PASS
+FORGOT_T07,Performance,FORGOT,/forgot-password,"[FORGOT] T07: TTFB < 1000ms [Time-To-First-Byte]",105,105,0,100,PASS
+FORGOT_T08,Performance,FORGOT,/forgot-password,"[FORGOT] T08: No request timeout occurred",105,105,0,100,PASS
+FORGOT_C01,Content,FORGOT,/forgot-password,"[FORGOT] C01: Response body is not empty",105,105,0,100,PASS
+FORGOT_C02,Content,FORGOT,/forgot-password,"[FORGOT] C02: Response body length > 100 bytes",105,105,0,100,PASS
+FORGOT_C03,Content,FORGOT,/forgot-password,"[FORGOT] C03: Response body length > 500 bytes",105,0,105,0,FAIL
+FORGOT_C04,Content,FORGOT,/forgot-password,"[FORGOT] C04: Response body length > 200 bytes",105,105,0,100,PASS
+FORGOT_C05,Content,FORGOT,/forgot-password,"[FORGOT] C05: Body contains DOCTYPE declaration",105,105,0,100,PASS
+FORGOT_C06,Content,FORGOT,/forgot-password,"[FORGOT] C06: Body contains <html> element",105,105,0,100,PASS
+FORGOT_C07,Content,FORGOT,/forgot-password,"[FORGOT] C07: Body contains <head> element",105,105,0,100,PASS
+FORGOT_C08,Content,FORGOT,/forgot-password,"[FORGOT] C08: Body contains <body> element",105,105,0,100,PASS
+FORGOT_C09,Content,FORGOT,/forgot-password,"[FORGOT] C09: Body contains <title> tag with app name",105,105,0,100,PASS
+FORGOT_C10,Content,FORGOT,/forgot-password,"[FORGOT] C10: Body contains React root mount element",105,105,0,100,PASS
+FORGOT_H01,Headers,FORGOT,/forgot-password,"[FORGOT] H01: Content-Type header is present",105,105,0,100,PASS
+FORGOT_H02,Headers,FORGOT,/forgot-password,"[FORGOT] H02: Content-Type includes text/html",105,105,0,100,PASS
+FORGOT_H03,Headers,FORGOT,/forgot-password,"[FORGOT] H03: Content-Length or Transfer-Encoding present",105,105,0,100,PASS
+FORGOT_H04,Headers,FORGOT,/forgot-password,"[FORGOT] H04: No error indicator in response headers",105,105,0,100,PASS
+FORGOT_E01,Errors,FORGOT,/forgot-password,"[FORGOT] E01: Body does not contain 500 Internal Server Error",105,105,0,100,PASS
+FORGOT_E02,Errors,FORGOT,/forgot-password,"[FORGOT] E02: Body does not contain 503 Service Unavailable",105,105,0,100,PASS
+FORGOT_E03,Errors,FORGOT,/forgot-password,"[FORGOT] E03: No network or connection error occurred",105,105,0,100,PASS
+HOME_S01,Status,HOME,/home,"[HOME] S01: HTTP status is 200",105,105,0,100,PASS
+HOME_S02,Status,HOME,/home,"[HOME] S02: HTTP status is not 404",105,105,0,100,PASS
+HOME_S03,Status,HOME,/home,"[HOME] S03: HTTP status is not 500",105,105,0,100,PASS
+HOME_S04,Status,HOME,/home,"[HOME] S04: No client-side errors (status < 400)",105,105,0,100,PASS
+HOME_S05,Status,HOME,/home,"[HOME] S05: No server-side errors (status < 500)",105,105,0,100,PASS
+HOME_T01,Performance,HOME,/home,"[HOME] T01: Response time < 5000ms [CRITICAL]",105,105,0,100,PASS
+HOME_T02,Performance,HOME,/home,"[HOME] T02: Response time < 3000ms [GOOD]",105,105,0,100,PASS
+HOME_T03,Performance,HOME,/home,"[HOME] T03: Response time < 2000ms [TARGET]",105,105,0,100,PASS
+HOME_T04,Performance,HOME,/home,"[HOME] T04: Response time < 1000ms [EXCELLENT]",105,105,0,100,PASS
+HOME_T05,Performance,HOME,/home,"[HOME] T05: Response time < 500ms [FAST]",105,105,0,100,PASS
+HOME_T06,Performance,HOME,/home,"[HOME] T06: TTFB < 2000ms [Time-To-First-Byte]",105,105,0,100,PASS
+HOME_T07,Performance,HOME,/home,"[HOME] T07: TTFB < 1000ms [Time-To-First-Byte]",105,105,0,100,PASS
+HOME_T08,Performance,HOME,/home,"[HOME] T08: No request timeout occurred",105,105,0,100,PASS
+HOME_C01,Content,HOME,/home,"[HOME] C01: Response body is not empty",105,105,0,100,PASS
+HOME_C02,Content,HOME,/home,"[HOME] C02: Response body length > 100 bytes",105,105,0,100,PASS
+HOME_C03,Content,HOME,/home,"[HOME] C03: Response body length > 500 bytes",105,0,105,0,FAIL
+HOME_C04,Content,HOME,/home,"[HOME] C04: Response body length > 200 bytes",105,105,0,100,PASS
+HOME_C05,Content,HOME,/home,"[HOME] C05: Body contains DOCTYPE declaration",105,105,0,100,PASS
+HOME_C06,Content,HOME,/home,"[HOME] C06: Body contains <html> element",105,105,0,100,PASS
+HOME_C07,Content,HOME,/home,"[HOME] C07: Body contains <head> element",105,105,0,100,PASS
+HOME_C08,Content,HOME,/home,"[HOME] C08: Body contains <body> element",105,105,0,100,PASS
+HOME_C09,Content,HOME,/home,"[HOME] C09: Body contains <title> tag with app name",105,105,0,100,PASS
+HOME_C10,Content,HOME,/home,"[HOME] C10: Body contains React root mount element",105,105,0,100,PASS
+HOME_H01,Headers,HOME,/home,"[HOME] H01: Content-Type header is present",105,105,0,100,PASS
+HOME_H02,Headers,HOME,/home,"[HOME] H02: Content-Type includes text/html",105,105,0,100,PASS
+HOME_H03,Headers,HOME,/home,"[HOME] H03: Content-Length or Transfer-Encoding present",105,105,0,100,PASS
+HOME_H04,Headers,HOME,/home,"[HOME] H04: No error indicator in response headers",105,105,0,100,PASS
+HOME_E01,Errors,HOME,/home,"[HOME] E01: Body does not contain 500 Internal Server Error",105,105,0,100,PASS
+HOME_E02,Errors,HOME,/home,"[HOME] E02: Body does not contain 503 Service Unavailable",105,105,0,100,PASS
+HOME_E03,Errors,HOME,/home,"[HOME] E03: No network or connection error occurred",105,105,0,100,PASS
+PROFILE_S01,Status,PROFILE,/profile,"[PROFILE] S01: HTTP status is 200",105,105,0,100,PASS
+PROFILE_S02,Status,PROFILE,/profile,"[PROFILE] S02: HTTP status is not 404",105,105,0,100,PASS
+PROFILE_S03,Status,PROFILE,/profile,"[PROFILE] S03: HTTP status is not 500",105,105,0,100,PASS
+PROFILE_S04,Status,PROFILE,/profile,"[PROFILE] S04: No client-side errors (status < 400)",105,105,0,100,PASS
+PROFILE_S05,Status,PROFILE,/profile,"[PROFILE] S05: No server-side errors (status < 500)",105,105,0,100,PASS
+PROFILE_T01,Performance,PROFILE,/profile,"[PROFILE] T01: Response time < 5000ms [CRITICAL]",105,105,0,100,PASS
+PROFILE_T02,Performance,PROFILE,/profile,"[PROFILE] T02: Response time < 3000ms [GOOD]",105,105,0,100,PASS
+PROFILE_T03,Performance,PROFILE,/profile,"[PROFILE] T03: Response time < 2000ms [TARGET]",105,105,0,100,PASS
+PROFILE_T04,Performance,PROFILE,/profile,"[PROFILE] T04: Response time < 1000ms [EXCELLENT]",105,105,0,100,PASS
+PROFILE_T05,Performance,PROFILE,/profile,"[PROFILE] T05: Response time < 500ms [FAST]",105,105,0,100,PASS
+PROFILE_T06,Performance,PROFILE,/profile,"[PROFILE] T06: TTFB < 2000ms [Time-To-First-Byte]",105,105,0,100,PASS
+PROFILE_T07,Performance,PROFILE,/profile,"[PROFILE] T07: TTFB < 1000ms [Time-To-First-Byte]",105,105,0,100,PASS
+PROFILE_T08,Performance,PROFILE,/profile,"[PROFILE] T08: No request timeout occurred",105,105,0,100,PASS
+PROFILE_C01,Content,PROFILE,/profile,"[PROFILE] C01: Response body is not empty",105,105,0,100,PASS
+PROFILE_C02,Content,PROFILE,/profile,"[PROFILE] C02: Response body length > 100 bytes",105,105,0,100,PASS
+PROFILE_C03,Content,PROFILE,/profile,"[PROFILE] C03: Response body length > 500 bytes",105,0,105,0,FAIL
+PROFILE_C04,Content,PROFILE,/profile,"[PROFILE] C04: Response body length > 200 bytes",105,105,0,100,PASS
+PROFILE_C05,Content,PROFILE,/profile,"[PROFILE] C05: Body contains DOCTYPE declaration",105,105,0,100,PASS
+PROFILE_C06,Content,PROFILE,/profile,"[PROFILE] C06: Body contains <html> element",105,105,0,100,PASS
+PROFILE_C07,Content,PROFILE,/profile,"[PROFILE] C07: Body contains <head> element",105,105,0,100,PASS
+PROFILE_C08,Content,PROFILE,/profile,"[PROFILE] C08: Body contains <body> element",105,105,0,100,PASS
+PROFILE_C09,Content,PROFILE,/profile,"[PROFILE] C09: Body contains <title> tag with app name",105,105,0,100,PASS
+PROFILE_C10,Content,PROFILE,/profile,"[PROFILE] C10: Body contains React root mount element",105,105,0,100,PASS
+PROFILE_H01,Headers,PROFILE,/profile,"[PROFILE] H01: Content-Type header is present",105,105,0,100,PASS
+PROFILE_H02,Headers,PROFILE,/profile,"[PROFILE] H02: Content-Type includes text/html",105,105,0,100,PASS
+PROFILE_H03,Headers,PROFILE,/profile,"[PROFILE] H03: Content-Length or Transfer-Encoding present",105,105,0,100,PASS
+PROFILE_H04,Headers,PROFILE,/profile,"[PROFILE] H04: No error indicator in response headers",105,105,0,100,PASS
+PROFILE_E01,Errors,PROFILE,/profile,"[PROFILE] E01: Body does not contain 500 Internal Server Error",105,105,0,100,PASS
+PROFILE_E02,Errors,PROFILE,/profile,"[PROFILE] E02: Body does not contain 503 Service Unavailable",105,105,0,100,PASS
+PROFILE_E03,Errors,PROFILE,/profile,"[PROFILE] E03: No network or connection error occurred",105,105,0,100,PASS
+PROGRESS_S01,Status,PROGRESS,/progress,"[PROGRESS] S01: HTTP status is 200",105,105,0,100,PASS
+PROGRESS_S02,Status,PROGRESS,/progress,"[PROGRESS] S02: HTTP status is not 404",105,105,0,100,PASS
+PROGRESS_S03,Status,PROGRESS,/progress,"[PROGRESS] S03: HTTP status is not 500",105,105,0,100,PASS
+PROGRESS_S04,Status,PROGRESS,/progress,"[PROGRESS] S04: No client-side errors (status < 400)",105,105,0,100,PASS
+PROGRESS_S05,Status,PROGRESS,/progress,"[PROGRESS] S05: No server-side errors (status < 500)",105,105,0,100,PASS
+PROGRESS_T01,Performance,PROGRESS,/progress,"[PROGRESS] T01: Response time < 5000ms [CRITICAL]",105,105,0,100,PASS
+PROGRESS_T02,Performance,PROGRESS,/progress,"[PROGRESS] T02: Response time < 3000ms [GOOD]",105,105,0,100,PASS
+PROGRESS_T03,Performance,PROGRESS,/progress,"[PROGRESS] T03: Response time < 2000ms [TARGET]",105,105,0,100,PASS
+PROGRESS_T04,Performance,PROGRESS,/progress,"[PROGRESS] T04: Response time < 1000ms [EXCELLENT]",105,105,0,100,PASS
+PROGRESS_T05,Performance,PROGRESS,/progress,"[PROGRESS] T05: Response time < 500ms [FAST]",105,105,0,100,PASS
+PROGRESS_T06,Performance,PROGRESS,/progress,"[PROGRESS] T06: TTFB < 2000ms [Time-To-First-Byte]",105,105,0,100,PASS
+PROGRESS_T07,Performance,PROGRESS,/progress,"[PROGRESS] T07: TTFB < 1000ms [Time-To-First-Byte]",105,105,0,100,PASS
+PROGRESS_T08,Performance,PROGRESS,/progress,"[PROGRESS] T08: No request timeout occurred",105,105,0,100,PASS
+PROGRESS_C01,Content,PROGRESS,/progress,"[PROGRESS] C01: Response body is not empty",105,105,0,100,PASS
+PROGRESS_C02,Content,PROGRESS,/progress,"[PROGRESS] C02: Response body length > 100 bytes",105,105,0,100,PASS
+PROGRESS_C03,Content,PROGRESS,/progress,"[PROGRESS] C03: Response body length > 500 bytes",105,0,105,0,FAIL
+PROGRESS_C04,Content,PROGRESS,/progress,"[PROGRESS] C04: Response body length > 200 bytes",105,105,0,100,PASS
+PROGRESS_C05,Content,PROGRESS,/progress,"[PROGRESS] C05: Body contains DOCTYPE declaration",105,105,0,100,PASS
+PROGRESS_C06,Content,PROGRESS,/progress,"[PROGRESS] C06: Body contains <html> element",105,105,0,100,PASS
+PROGRESS_C07,Content,PROGRESS,/progress,"[PROGRESS] C07: Body contains <head> element",105,105,0,100,PASS
+PROGRESS_C08,Content,PROGRESS,/progress,"[PROGRESS] C08: Body contains <body> element",105,105,0,100,PASS
+PROGRESS_C09,Content,PROGRESS,/progress,"[PROGRESS] C09: Body contains <title> tag with app name",105,105,0,100,PASS
+PROGRESS_C10,Content,PROGRESS,/progress,"[PROGRESS] C10: Body contains React root mount element",105,105,0,100,PASS
+PROGRESS_H01,Headers,PROGRESS,/progress,"[PROGRESS] H01: Content-Type header is present",105,105,0,100,PASS
+PROGRESS_H02,Headers,PROGRESS,/progress,"[PROGRESS] H02: Content-Type includes text/html",105,105,0,100,PASS
+PROGRESS_H03,Headers,PROGRESS,/progress,"[PROGRESS] H03: Content-Length or Transfer-Encoding present",105,105,0,100,PASS
+PROGRESS_H04,Headers,PROGRESS,/progress,"[PROGRESS] H04: No error indicator in response headers",105,105,0,100,PASS
+PROGRESS_E01,Errors,PROGRESS,/progress,"[PROGRESS] E01: Body does not contain 500 Internal Server Error",105,105,0,100,PASS
+PROGRESS_E02,Errors,PROGRESS,/progress,"[PROGRESS] E02: Body does not contain 503 Service Unavailable",105,105,0,100,PASS
+PROGRESS_E03,Errors,PROGRESS,/progress,"[PROGRESS] E03: No network or connection error occurred",105,105,0,100,PASS
+SAVED_S01,Status,SAVED,/saved-progress,"[SAVED] S01: HTTP status is 200",105,105,0,100,PASS
+SAVED_S02,Status,SAVED,/saved-progress,"[SAVED] S02: HTTP status is not 404",105,105,0,100,PASS
+SAVED_S03,Status,SAVED,/saved-progress,"[SAVED] S03: HTTP status is not 500",105,105,0,100,PASS
+SAVED_S04,Status,SAVED,/saved-progress,"[SAVED] S04: No client-side errors (status < 400)",105,105,0,100,PASS
+SAVED_S05,Status,SAVED,/saved-progress,"[SAVED] S05: No server-side errors (status < 500)",105,105,0,100,PASS
+SAVED_T01,Performance,SAVED,/saved-progress,"[SAVED] T01: Response time < 5000ms [CRITICAL]",105,105,0,100,PASS
+SAVED_T02,Performance,SAVED,/saved-progress,"[SAVED] T02: Response time < 3000ms [GOOD]",105,105,0,100,PASS
+SAVED_T03,Performance,SAVED,/saved-progress,"[SAVED] T03: Response time < 2000ms [TARGET]",105,105,0,100,PASS
+SAVED_T04,Performance,SAVED,/saved-progress,"[SAVED] T04: Response time < 1000ms [EXCELLENT]",105,105,0,100,PASS
+SAVED_T05,Performance,SAVED,/saved-progress,"[SAVED] T05: Response time < 500ms [FAST]",105,105,0,100,PASS
+SAVED_T06,Performance,SAVED,/saved-progress,"[SAVED] T06: TTFB < 2000ms [Time-To-First-Byte]",105,105,0,100,PASS
+SAVED_T07,Performance,SAVED,/saved-progress,"[SAVED] T07: TTFB < 1000ms [Time-To-First-Byte]",105,105,0,100,PASS
+SAVED_T08,Performance,SAVED,/saved-progress,"[SAVED] T08: No request timeout occurred",105,105,0,100,PASS
+SAVED_C01,Content,SAVED,/saved-progress,"[SAVED] C01: Response body is not empty",105,105,0,100,PASS
+SAVED_C02,Content,SAVED,/saved-progress,"[SAVED] C02: Response body length > 100 bytes",105,105,0,100,PASS
+SAVED_C03,Content,SAVED,/saved-progress,"[SAVED] C03: Response body length > 500 bytes",105,0,105,0,FAIL
+SAVED_C04,Content,SAVED,/saved-progress,"[SAVED] C04: Response body length > 200 bytes",105,105,0,100,PASS
+SAVED_C05,Content,SAVED,/saved-progress,"[SAVED] C05: Body contains DOCTYPE declaration",105,105,0,100,PASS
+SAVED_C06,Content,SAVED,/saved-progress,"[SAVED] C06: Body contains <html> element",105,105,0,100,PASS
+SAVED_C07,Content,SAVED,/saved-progress,"[SAVED] C07: Body contains <head> element",105,105,0,100,PASS
+SAVED_C08,Content,SAVED,/saved-progress,"[SAVED] C08: Body contains <body> element",105,105,0,100,PASS
+SAVED_C09,Content,SAVED,/saved-progress,"[SAVED] C09: Body contains <title> tag with app name",105,105,0,100,PASS
+SAVED_C10,Content,SAVED,/saved-progress,"[SAVED] C10: Body contains React root mount element",105,105,0,100,PASS
+SAVED_H01,Headers,SAVED,/saved-progress,"[SAVED] H01: Content-Type header is present",105,105,0,100,PASS
+SAVED_H02,Headers,SAVED,/saved-progress,"[SAVED] H02: Content-Type includes text/html",105,105,0,100,PASS
+SAVED_H03,Headers,SAVED,/saved-progress,"[SAVED] H03: Content-Length or Transfer-Encoding present",105,105,0,100,PASS
+SAVED_H04,Headers,SAVED,/saved-progress,"[SAVED] H04: No error indicator in response headers",105,105,0,100,PASS
+SAVED_E01,Errors,SAVED,/saved-progress,"[SAVED] E01: Body does not contain 500 Internal Server Error",105,105,0,100,PASS
+SAVED_E02,Errors,SAVED,/saved-progress,"[SAVED] E02: Body does not contain 503 Service Unavailable",105,105,0,100,PASS
+SAVED_E03,Errors,SAVED,/saved-progress,"[SAVED] E03: No network or connection error occurred",105,105,0,100,PASS
+UPDATE_S01,Status,UPDATE,/update-info,"[UPDATE] S01: HTTP status is 200",105,105,0,100,PASS
+UPDATE_S02,Status,UPDATE,/update-info,"[UPDATE] S02: HTTP status is not 404",105,105,0,100,PASS
+UPDATE_S03,Status,UPDATE,/update-info,"[UPDATE] S03: HTTP status is not 500",105,105,0,100,PASS
+UPDATE_S04,Status,UPDATE,/update-info,"[UPDATE] S04: No client-side errors (status < 400)",105,105,0,100,PASS
+UPDATE_S05,Status,UPDATE,/update-info,"[UPDATE] S05: No server-side errors (status < 500)",105,105,0,100,PASS
+UPDATE_T01,Performance,UPDATE,/update-info,"[UPDATE] T01: Response time < 5000ms [CRITICAL]",105,105,0,100,PASS
+UPDATE_T02,Performance,UPDATE,/update-info,"[UPDATE] T02: Response time < 3000ms [GOOD]",105,105,0,100,PASS
+UPDATE_T03,Performance,UPDATE,/update-info,"[UPDATE] T03: Response time < 2000ms [TARGET]",105,105,0,100,PASS
+UPDATE_T04,Performance,UPDATE,/update-info,"[UPDATE] T04: Response time < 1000ms [EXCELLENT]",105,105,0,100,PASS
+UPDATE_T05,Performance,UPDATE,/update-info,"[UPDATE] T05: Response time < 500ms [FAST]",105,105,0,100,PASS
+UPDATE_T06,Performance,UPDATE,/update-info,"[UPDATE] T06: TTFB < 2000ms [Time-To-First-Byte]",105,105,0,100,PASS
+UPDATE_T07,Performance,UPDATE,/update-info,"[UPDATE] T07: TTFB < 1000ms [Time-To-First-Byte]",105,105,0,100,PASS
+UPDATE_T08,Performance,UPDATE,/update-info,"[UPDATE] T08: No request timeout occurred",105,105,0,100,PASS
+UPDATE_C01,Content,UPDATE,/update-info,"[UPDATE] C01: Response body is not empty",105,105,0,100,PASS
+UPDATE_C02,Content,UPDATE,/update-info,"[UPDATE] C02: Response body length > 100 bytes",105,105,0,100,PASS
+UPDATE_C03,Content,UPDATE,/update-info,"[UPDATE] C03: Response body length > 500 bytes",105,0,105,0,FAIL
+UPDATE_C04,Content,UPDATE,/update-info,"[UPDATE] C04: Response body length > 200 bytes",105,105,0,100,PASS
+UPDATE_C05,Content,UPDATE,/update-info,"[UPDATE] C05: Body contains DOCTYPE declaration",105,105,0,100,PASS
+UPDATE_C06,Content,UPDATE,/update-info,"[UPDATE] C06: Body contains <html> element",105,105,0,100,PASS
+UPDATE_C07,Content,UPDATE,/update-info,"[UPDATE] C07: Body contains <head> element",105,105,0,100,PASS
+UPDATE_C08,Content,UPDATE,/update-info,"[UPDATE] C08: Body contains <body> element",105,105,0,100,PASS
+UPDATE_C09,Content,UPDATE,/update-info,"[UPDATE] C09: Body contains <title> tag with app name",105,105,0,100,PASS
+UPDATE_C10,Content,UPDATE,/update-info,"[UPDATE] C10: Body contains React root mount element",105,105,0,100,PASS
+UPDATE_H01,Headers,UPDATE,/update-info,"[UPDATE] H01: Content-Type header is present",105,105,0,100,PASS
+UPDATE_H02,Headers,UPDATE,/update-info,"[UPDATE] H02: Content-Type includes text/html",105,105,0,100,PASS
+UPDATE_H03,Headers,UPDATE,/update-info,"[UPDATE] H03: Content-Length or Transfer-Encoding present",105,105,0,100,PASS
+UPDATE_H04,Headers,UPDATE,/update-info,"[UPDATE] H04: No error indicator in response headers",105,105,0,100,PASS
+UPDATE_E01,Errors,UPDATE,/update-info,"[UPDATE] E01: Body does not contain 500 Internal Server Error",105,105,0,100,PASS
+UPDATE_E02,Errors,UPDATE,/update-info,"[UPDATE] E02: Body does not contain 503 Service Unavailable",105,105,0,100,PASS
+UPDATE_E03,Errors,UPDATE,/update-info,"[UPDATE] E03: No network or connection error occurred",105,105,0,100,PASS
