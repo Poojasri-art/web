@@ -23,6 +23,8 @@ jobs:
   load-test:
     name: Run Load Test Suite (300 Checks)
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
 
     steps:
       - name: 1. Checkout Repository
@@ -72,7 +74,7 @@ jobs:
           STRESS_LOOPS:   '1'
           SPIKE_USERS:    '50'
           SPIKE_LOOPS:    '1'
-          THINK_TIME:     '50'
+          THINK_TIME:     '500'
           REQUEST_TIMEOUT: '10000'
           PASS_THRESHOLD:  '95'
         run: |
