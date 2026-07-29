@@ -124,9 +124,22 @@ jobs:
               console.log('FAILED CHECKS:');
               lines.filter(l => l.includes(',FAIL')).slice(0, 20).forEach(l => {
                 const parts = l.split(',');
-                console.log('  FAIL: ' + parts[0] + ' - ' + parts[3]);
+                console.log('  FAIL: ' + parts[0] + ' - ' + parts[4]);
               });
             }
           } catch(e) { console.log('Could not parse CSV: ' + e.message); }
           " || true
           echo "==================================================="
+
+      - name: 10. Push Results to Branch for Debugging
+        if: always()
+        run: |
+          git config --global user.name "load-test-bot"
+          git config --global user.email "load-test-bot@github.com"
+          git checkout -b load-test-results || git checkout load-test-results
+          mkdir -p ci-results
+          cp load-testing/results/check-results.csv ci-results/check-results.csv
+          cp load-testing/results/route-stats.csv ci-results/route-stats.csv
+          git add ci-results/
+          git commit -m "Upload CI load test results"
+          git push origin load-test-results --force
