@@ -15,7 +15,8 @@
     "test:forms": "mocha tests/forms.test.js --config .mocharc.json",
     "test:ui": "mocha tests/ui.test.js --config .mocharc.json",
     "test:navigation": "mocha tests/navigation.test.js --config .mocharc.json",
-    "test:discovery": "mocha tests/dynamic_discovery.test.js --config .mocharc.json"
+    "test:discovery": "mocha tests/dynamic_discovery.test.js --config .mocharc.json",
+    "test:security": "mocha --config .security.mocharc.json"
   },
   "keywords": [
     "selenium",

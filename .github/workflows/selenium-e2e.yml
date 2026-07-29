@@ -107,5 +107,93 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          node -e "const r=require('./e2e-framework/reports/html/E2E_Test_Report.json'); let msg = 'Failures:\\n'; r.results.forEach(s=>s.suites.forEach(ss=>ss.tests.forEach(t=>{if(t.fail) msg+=t.title+'\\n'+t.err.message+'\\n\\n';}))); require('fs').writeFileSync('fails.txt', msg);"
           gh issue create --title "Actions E2E Failures" --body-file fails.txt || true
+
+  vulnerability-security-tests:
+    name: Run Vulnerability and Security Test Suite
+    runs-on: ubuntu-latest
+
+    strategy:
+      fail-fast: false
+      matrix:
+        browser: [chrome, firefox]
+
+    steps:
+      - name: 1. Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: 2. Setup Node.js Environment
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: 'Meditation_web/package-lock.json'
+
+      - name: 3. Install React Application Dependencies & Build
+        run: |
+          cd Meditation_web
+          npm ci
+          npm run build
+
+      - name: 4. Start React Web Application Server
+        run: |
+          cd Meditation_web
+          npm run preview -- --port 5173 &
+          npx wait-on http://localhost:5173 --timeout 30000
+
+      - name: 5. Install E2E Automation Framework Dependencies
+        run: |
+          cd e2e-framework
+          npm ci
+
+      - name: 6. Run Programmatic Test Count Validation
+        run: |
+          cd e2e-framework
+          node security-tests/count-tests.js
+
+      - name: 7. Execute Selenium Vulnerability and Security Tests
+        env:
+          BASE_URL: 'http://localhost:5173'
+          BROWSER: ${{ matrix.browser }}
+          HEADLESS: 'true'
+        run: |
+          cd e2e-framework
+          node ./node_modules/mocha/bin/mocha.js --config .security.mocharc.json
+
+      - name: 7b. Print Failing Security Tests (always)
+        if: always()
+        run: |
+          node -e "
+          try {
+            const r = require('./e2e-framework/reports/security-html/Vulnerability_Test_Report.json');
+            let total=0, passed=0, failed=0;
+            r.results.forEach(s => s.suites.forEach(ss => ss.tests.forEach(t => {
+              total++;
+              if (t.pass) passed++;
+              if (t.fail) {
+                failed++;
+                console.log('FAIL: ' + t.title);
+                console.log('MSG: ' + (t.err && t.err.message ? t.err.message.substring(0, 200) : 'no msg'));
+                console.log('---');
+              }
+            })));
+            console.log('Total: ' + total + ', Passed: ' + passed + ', Failed: ' + failed);
+          } catch(e) { console.log('Could not parse report: ' + e.message); }
+          " || true
+
+      - name: 8. Upload Excel Vulnerability Report Artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: Vulnerability_Excel_Report_${{ matrix.browser }}
+          path: e2e-framework/excel/Security_Report.xlsx
+          retention-days: 30
+
+      - name: 9. Upload Mochawesome Vulnerability HTML Report Artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: Vulnerability_Mochawesome_Report_${{ matrix.browser }}
+          path: e2e-framework/reports/security-html/
+          retention-days: 30
+
