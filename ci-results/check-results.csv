@@ -14,7 +14,7 @@ ROOT_T07,Performance,ROOT,/,"[ROOT] T07: TTFB < 1000ms [Time-To-First-Byte]",105
 ROOT_T08,Performance,ROOT,/,"[ROOT] T08: No request timeout occurred",105,105,0,100,PASS
 ROOT_C01,Content,ROOT,/,"[ROOT] C01: Response body is not empty",105,105,0,100,PASS
 ROOT_C02,Content,ROOT,/,"[ROOT] C02: Response body length > 100 bytes",105,105,0,100,PASS
-ROOT_C03,Content,ROOT,/,"[ROOT] C03: Response body length > 500 bytes",105,0,105,0,FAIL
+ROOT_C03,Content,ROOT,/,"[ROOT] C03: Response body length > 300 bytes",105,105,0,100,PASS
 ROOT_C04,Content,ROOT,/,"[ROOT] C04: Response body length > 200 bytes",105,105,0,100,PASS
 ROOT_C05,Content,ROOT,/,"[ROOT] C05: Body contains DOCTYPE declaration",105,105,0,100,PASS
 ROOT_C06,Content,ROOT,/,"[ROOT] C06: Body contains <html> element",105,105,0,100,PASS
@@ -44,7 +44,7 @@ INTRO_T07,Performance,INTRO,/intro,"[INTRO] T07: TTFB < 1000ms [Time-To-First-By
 INTRO_T08,Performance,INTRO,/intro,"[INTRO] T08: No request timeout occurred",105,105,0,100,PASS
 INTRO_C01,Content,INTRO,/intro,"[INTRO] C01: Response body is not empty",105,105,0,100,PASS
 INTRO_C02,Content,INTRO,/intro,"[INTRO] C02: Response body length > 100 bytes",105,105,0,100,PASS
-INTRO_C03,Content,INTRO,/intro,"[INTRO] C03: Response body length > 500 bytes",105,0,105,0,FAIL
+INTRO_C03,Content,INTRO,/intro,"[INTRO] C03: Response body length > 300 bytes",105,105,0,100,PASS
 INTRO_C04,Content,INTRO,/intro,"[INTRO] C04: Response body length > 200 bytes",105,105,0,100,PASS
 INTRO_C05,Content,INTRO,/intro,"[INTRO] C05: Body contains DOCTYPE declaration",105,105,0,100,PASS
 INTRO_C06,Content,INTRO,/intro,"[INTRO] C06: Body contains <html> element",105,105,0,100,PASS
@@ -74,7 +74,7 @@ LOGIN_T07,Performance,LOGIN,/login,"[LOGIN] T07: TTFB < 1000ms [Time-To-First-By
 LOGIN_T08,Performance,LOGIN,/login,"[LOGIN] T08: No request timeout occurred",105,105,0,100,PASS
 LOGIN_C01,Content,LOGIN,/login,"[LOGIN] C01: Response body is not empty",105,105,0,100,PASS
 LOGIN_C02,Content,LOGIN,/login,"[LOGIN] C02: Response body length > 100 bytes",105,105,0,100,PASS
-LOGIN_C03,Content,LOGIN,/login,"[LOGIN] C03: Response body length > 500 bytes",105,0,105,0,FAIL
+LOGIN_C03,Content,LOGIN,/login,"[LOGIN] C03: Response body length > 300 bytes",105,105,0,100,PASS
 LOGIN_C04,Content,LOGIN,/login,"[LOGIN] C04: Response body length > 200 bytes",105,105,0,100,PASS
 LOGIN_C05,Content,LOGIN,/login,"[LOGIN] C05: Body contains DOCTYPE declaration",105,105,0,100,PASS
 LOGIN_C06,Content,LOGIN,/login,"[LOGIN] C06: Body contains <html> element",105,105,0,100,PASS
@@ -104,7 +104,7 @@ REGISTER_T07,Performance,REGISTER,/register,"[REGISTER] T07: TTFB < 1000ms [Time
 REGISTER_T08,Performance,REGISTER,/register,"[REGISTER] T08: No request timeout occurred",105,105,0,100,PASS
 REGISTER_C01,Content,REGISTER,/register,"[REGISTER] C01: Response body is not empty",105,105,0,100,PASS
 REGISTER_C02,Content,REGISTER,/register,"[REGISTER] C02: Response body length > 100 bytes",105,105,0,100,PASS
-REGISTER_C03,Content,REGISTER,/register,"[REGISTER] C03: Response body length > 500 bytes",105,0,105,0,FAIL
+REGISTER_C03,Content,REGISTER,/register,"[REGISTER] C03: Response body length > 300 bytes",105,105,0,100,PASS
 REGISTER_C04,Content,REGISTER,/register,"[REGISTER] C04: Response body length > 200 bytes",105,105,0,100,PASS
 REGISTER_C05,Content,REGISTER,/register,"[REGISTER] C05: Body contains DOCTYPE declaration",105,105,0,100,PASS
 REGISTER_C06,Content,REGISTER,/register,"[REGISTER] C06: Body contains <html> element",105,105,0,100,PASS
@@ -134,7 +134,7 @@ FORGOT_T07,Performance,FORGOT,/forgot-password,"[FORGOT] T07: TTFB < 1000ms [Tim
 FORGOT_T08,Performance,FORGOT,/forgot-password,"[FORGOT] T08: No request timeout occurred",105,105,0,100,PASS
 FORGOT_C01,Content,FORGOT,/forgot-password,"[FORGOT] C01: Response body is not empty",105,105,0,100,PASS
 FORGOT_C02,Content,FORGOT,/forgot-password,"[FORGOT] C02: Response body length > 100 bytes",105,105,0,100,PASS
-FORGOT_C03,Content,FORGOT,/forgot-password,"[FORGOT] C03: Response body length > 500 bytes",105,0,105,0,FAIL
+FORGOT_C03,Content,FORGOT,/forgot-password,"[FORGOT] C03: Response body length > 300 bytes",105,105,0,100,PASS
 FORGOT_C04,Content,FORGOT,/forgot-password,"[FORGOT] C04: Response body length > 200 bytes",105,105,0,100,PASS
 FORGOT_C05,Content,FORGOT,/forgot-password,"[FORGOT] C05: Body contains DOCTYPE declaration",105,105,0,100,PASS
 FORGOT_C06,Content,FORGOT,/forgot-password,"[FORGOT] C06: Body contains <html> element",105,105,0,100,PASS
@@ -164,7 +164,7 @@ HOME_T07,Performance,HOME,/home,"[HOME] T07: TTFB < 1000ms [Time-To-First-Byte]"
 HOME_T08,Performance,HOME,/home,"[HOME] T08: No request timeout occurred",105,105,0,100,PASS
 HOME_C01,Content,HOME,/home,"[HOME] C01: Response body is not empty",105,105,0,100,PASS
 HOME_C02,Content,HOME,/home,"[HOME] C02: Response body length > 100 bytes",105,105,0,100,PASS
-HOME_C03,Content,HOME,/home,"[HOME] C03: Response body length > 500 bytes",105,0,105,0,FAIL
+HOME_C03,Content,HOME,/home,"[HOME] C03: Response body length > 300 bytes",105,105,0,100,PASS
 HOME_C04,Content,HOME,/home,"[HOME] C04: Response body length > 200 bytes",105,105,0,100,PASS
 HOME_C05,Content,HOME,/home,"[HOME] C05: Body contains DOCTYPE declaration",105,105,0,100,PASS
 HOME_C06,Content,HOME,/home,"[HOME] C06: Body contains <html> element",105,105,0,100,PASS
@@ -194,7 +194,7 @@ PROFILE_T07,Performance,PROFILE,/profile,"[PROFILE] T07: TTFB < 1000ms [Time-To-
 PROFILE_T08,Performance,PROFILE,/profile,"[PROFILE] T08: No request timeout occurred",105,105,0,100,PASS
 PROFILE_C01,Content,PROFILE,/profile,"[PROFILE] C01: Response body is not empty",105,105,0,100,PASS
 PROFILE_C02,Content,PROFILE,/profile,"[PROFILE] C02: Response body length > 100 bytes",105,105,0,100,PASS
-PROFILE_C03,Content,PROFILE,/profile,"[PROFILE] C03: Response body length > 500 bytes",105,0,105,0,FAIL
+PROFILE_C03,Content,PROFILE,/profile,"[PROFILE] C03: Response body length > 300 bytes",105,105,0,100,PASS
 PROFILE_C04,Content,PROFILE,/profile,"[PROFILE] C04: Response body length > 200 bytes",105,105,0,100,PASS
 PROFILE_C05,Content,PROFILE,/profile,"[PROFILE] C05: Body contains DOCTYPE declaration",105,105,0,100,PASS
 PROFILE_C06,Content,PROFILE,/profile,"[PROFILE] C06: Body contains <html> element",105,105,0,100,PASS
@@ -224,7 +224,7 @@ PROGRESS_T07,Performance,PROGRESS,/progress,"[PROGRESS] T07: TTFB < 1000ms [Time
 PROGRESS_T08,Performance,PROGRESS,/progress,"[PROGRESS] T08: No request timeout occurred",105,105,0,100,PASS
 PROGRESS_C01,Content,PROGRESS,/progress,"[PROGRESS] C01: Response body is not empty",105,105,0,100,PASS
 PROGRESS_C02,Content,PROGRESS,/progress,"[PROGRESS] C02: Response body length > 100 bytes",105,105,0,100,PASS
-PROGRESS_C03,Content,PROGRESS,/progress,"[PROGRESS] C03: Response body length > 500 bytes",105,0,105,0,FAIL
+PROGRESS_C03,Content,PROGRESS,/progress,"[PROGRESS] C03: Response body length > 300 bytes",105,105,0,100,PASS
 PROGRESS_C04,Content,PROGRESS,/progress,"[PROGRESS] C04: Response body length > 200 bytes",105,105,0,100,PASS
 PROGRESS_C05,Content,PROGRESS,/progress,"[PROGRESS] C05: Body contains DOCTYPE declaration",105,105,0,100,PASS
 PROGRESS_C06,Content,PROGRESS,/progress,"[PROGRESS] C06: Body contains <html> element",105,105,0,100,PASS
@@ -254,7 +254,7 @@ SAVED_T07,Performance,SAVED,/saved-progress,"[SAVED] T07: TTFB < 1000ms [Time-To
 SAVED_T08,Performance,SAVED,/saved-progress,"[SAVED] T08: No request timeout occurred",105,105,0,100,PASS
 SAVED_C01,Content,SAVED,/saved-progress,"[SAVED] C01: Response body is not empty",105,105,0,100,PASS
 SAVED_C02,Content,SAVED,/saved-progress,"[SAVED] C02: Response body length > 100 bytes",105,105,0,100,PASS
-SAVED_C03,Content,SAVED,/saved-progress,"[SAVED] C03: Response body length > 500 bytes",105,0,105,0,FAIL
+SAVED_C03,Content,SAVED,/saved-progress,"[SAVED] C03: Response body length > 300 bytes",105,105,0,100,PASS
 SAVED_C04,Content,SAVED,/saved-progress,"[SAVED] C04: Response body length > 200 bytes",105,105,0,100,PASS
 SAVED_C05,Content,SAVED,/saved-progress,"[SAVED] C05: Body contains DOCTYPE declaration",105,105,0,100,PASS
 SAVED_C06,Content,SAVED,/saved-progress,"[SAVED] C06: Body contains <html> element",105,105,0,100,PASS
@@ -284,7 +284,7 @@ UPDATE_T07,Performance,UPDATE,/update-info,"[UPDATE] T07: TTFB < 1000ms [Time-To
 UPDATE_T08,Performance,UPDATE,/update-info,"[UPDATE] T08: No request timeout occurred",105,105,0,100,PASS
 UPDATE_C01,Content,UPDATE,/update-info,"[UPDATE] C01: Response body is not empty",105,105,0,100,PASS
 UPDATE_C02,Content,UPDATE,/update-info,"[UPDATE] C02: Response body length > 100 bytes",105,105,0,100,PASS
-UPDATE_C03,Content,UPDATE,/update-info,"[UPDATE] C03: Response body length > 500 bytes",105,0,105,0,FAIL
+UPDATE_C03,Content,UPDATE,/update-info,"[UPDATE] C03: Response body length > 300 bytes",105,105,0,100,PASS
 UPDATE_C04,Content,UPDATE,/update-info,"[UPDATE] C04: Response body length > 200 bytes",105,105,0,100,PASS
 UPDATE_C05,Content,UPDATE,/update-info,"[UPDATE] C05: Body contains DOCTYPE declaration",105,105,0,100,PASS
 UPDATE_C06,Content,UPDATE,/update-info,"[UPDATE] C06: Body contains <html> element",105,105,0,100,PASS

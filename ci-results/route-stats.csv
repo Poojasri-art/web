@@ -1,0 +1,11 @@
+Route ID,Route Path,Route Name,HTTP Requests,Avg (ms),Min (ms),Max (ms),P90 (ms),P95 (ms),P99 (ms),Error Rate (%)
+ROOT,/,"Splash / Root Page",105,1,1,7,2,2,3,0
+INTRO,/intro,"Intro Onboarding Page",105,1,0,3,2,2,3,0
+LOGIN,/login,"Login Page",105,1,0,3,2,2,3,0
+REGISTER,/register,"Registration Page",105,1,0,3,2,2,3,0
+FORGOT,/forgot-password,"Forgot Password Page",105,1,0,3,2,2,3,0
+HOME,/home,"Protected Home Route",105,1,0,3,2,2,2,0
+PROFILE,/profile,"Protected Profile Route",105,1,0,3,2,2,2,0
+PROGRESS,/progress,"Protected Progress Route",105,1,0,3,2,2,3,0
+SAVED,/saved-progress,"Protected Saved Progress Route",105,1,0,2,2,2,2,0
+UPDATE,/update-info,"Protected Update Info Route",105,1,1,6,2,2,3,0
