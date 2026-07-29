@@ -132,6 +132,7 @@ describe('Intro Page Onboarding E2E Tests', function () {
 
   it('IP_17: Description element is visible on slide 1', async function () {
     await page.navigate();
+    await page.utils.waitForVisible(page.description);
     const isDisplayed = await page.utils.isElementDisplayed(page.description);
     expect(isDisplayed).to.be.true;
   });
